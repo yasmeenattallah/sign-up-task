@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-/* start welcome page */
+/* welcome page */
 body {
     background: url('../dist/img/gradiant.png'),#fff;
     width:100%;
@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.welcome-container {
+.welcome-container, .register-container {
     width: 60vw;
     height: 50vh;
     padding:50px 40px ;
@@ -27,10 +27,10 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.welcome-image{
+.welcome-image, .register-image{
     width: 45%;
 }
-#welcome-img{
+#welcome-img, #register-img{
     width: 100%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -38,29 +38,29 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-.welcome-content{
+.welcome-content, .register-content{
     width: 45%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
 }
-.welcome-content h1{
+.welcome-content h1, .register-content h1{
     letter-spacing: 1.2px;
     font-family: 'Roboto';
     line-height: 3rem;
     font-size: 2.4rem;
 }
-.welcome-content p {
+.welcome-content p , .register-content p {
     color: #1F1249;
     font-family: 'Mulish';
     font-style: normal;
     font-size: 1.2rem;
     line-height: 5rem;
 }
-.welcome-content #welcome-content-btn{
+.welcome-content #welcome-content-btn, .register-container .register-form #register-form-btn{
     width: 22vw;
     height: 6.5vh;
+    font-size: 1rem;
     background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
     outline: 0px;
     border-color: #2663DF;
@@ -74,5 +74,68 @@ body {
     -o-border-radius: 10px;
     cursor: pointer;
 }
+.welcome-content #welcome-content-btn:hover,.register-container .register-form #register-form-btn:hover{
+    background: linear-gradient(113.87deg, rgba(38, 99, 223, 0.1) 14.81%, rgba(117, 143, 240, 0.1) 88.76%);
+    color:#1F1249;
 
-/* End welcome page  */
+}
+/* sign up page  */
+
+.register-container{
+    height:80vh;
+    padding: 30px 40px;
+    background:rgba(245, 247, 255, 0.85);
+}
+#register-img{
+    height: 72vh;
+}
+.register-content{
+    justify-content: space-between;
+
+}
+.register-content p{
+    line-height: 1.8rem;
+   
+}
+.register-content .register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.register-form input{
+    width: 26vw;
+    height: 3.5rem;
+    border: 1px solid #DBE3FF;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    outline: 0;
+    padding: 10px 30px 10px 45px;
+    
+
+}
+.register-form input[type=text] { 
+    background-image:url('./img/icons/User.png'), url('./img/icons/Divider.png') ;
+    background-position: 10px 13px , 34px 12px;
+    background-repeat: no-repeat;
+}
+.register-form input[type=email] { 
+    background-image:url('./img/icons/email.png'), url('./img/icons/Divider.png') ;
+    background-position: 10px 13px , 34px 12px;
+    background-repeat: no-repeat;
+}
+.register-form input[type=password] { 
+    background-image:url('./img/icons/password.png'), url('./img/icons/Divider.png') ;
+    background-position: 10px 13px , 34px 12px;
+    background-repeat: no-repeat;
+}
+.register-form #register-form-btn{
+    width: 26vw !important;
+    height: 3.5rem !important;
+
+
+}
