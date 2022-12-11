@@ -100,7 +100,7 @@ body {
 .register-content .register-form{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
 }
 .register-form input{
     width: 26vw;
@@ -138,4 +138,7 @@ body {
     height: 3.5rem !important;
 
 
+}
+.register-form small{
+    color: red;
 }
