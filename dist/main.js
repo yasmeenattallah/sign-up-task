@@ -78,7 +78,6 @@ const checkPassword = () => {
 };
 const checkConfirmPassword = () => {
     let valid = false;
-    // check confirm password
     const confirmPassVal = confirmPass.value.trim();
     const passwordVal = password.value.trim();
 
@@ -86,9 +85,7 @@ const checkConfirmPassword = () => {
         showError(confirmPass, 'Please enter the password again');
     } else if (passwordVal !== confirmPassVal) {
         showError(confirmPass, 'The password does not match');
-    }else if (!re.test(confirmPassVal)) {
-        showError(password, 'Password must has at least 8 characters ');
-    } else {
+    }else {
         showSuccess(confirmPass);
         valid = true;
     }
@@ -116,11 +113,37 @@ function showSuccess (input) {
 
 // register form validation
 registerForm.addEventListener('submit', (e)=>{
+    const usernameVal = username.value;
+    const emailVal = email.value;
+    const passwordVal = password.value;
+    const confirmPassVal = confirmPass.value;
+
+//  const body = {
+//     usernameVal,emailVal,passwordVal,confirmPassVal
+//  }
    e.preventDefault();
    checkUsername();
    checkEmail();
    checkPassword();
    checkConfirmPassword();
+   fetch('https://goldblv.com/api/hiring/tasks/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        usernameVal, emailVal, passwordVal, confirmPassVal,
+      }),
 
+  })
+    .then((response) => response.json()).then((data) => {
+        window.location.href="./login.html";
+
+        return data;
+      }).catch((err) => {
+        console.log(err,555);
+      });;
+   
 });
+
 
