@@ -17,27 +17,17 @@
         <section class="register-content">
             <h1> Create Account</h1>
             <p>Go ahead and sign up, let everyone know how awesome you are!</p>
-            <form id="register" class="register-form">
-                <div class="form-field">
-
+            <form id="register" class="register-form" >
                     <input  type="text" id="username" name="username" placeholder="Username"   />
-                    <small></small>
-                </div>
-                <div>
+                    <small id="userErr"></small>
 
                     <input type="email"  name="email" id="email" placeholder="Email" />
-                    <small></small>
-                </div>
-                <div>
-
+                    <small id = "emailErr"></small>
                      <input type="password" name="password" id="password" placeholder="Password"  />
-                    <small></small> 
-                </div>
-                <div>
-
-                    <input type="password"  name="confirm password" id="confirmPassword" placeholder="Confirm Password"  />
-                    <small></small> 
-                </div>
+                    <small id="passError"></small> 
+                    <input type="password"  name="password_confirmation" id="confirmPassword" placeholder="Confirm Password"  />
+                    <small id="confirmError" ></small> 
+                
                   <button type="submit"  id="register-form-btn">Create Account</button>
 
             </form>
