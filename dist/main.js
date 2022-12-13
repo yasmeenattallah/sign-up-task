@@ -149,18 +149,15 @@ registerForm.addEventListener('submit', (e)=>{
     }
      ).then((response)=>{
         const data = JSON.parse(response);
-        console.log(data.errors,777);
-
              localStorage.setItem("email", email);
              if (data.errors){
                 checkUsername( data.errors.username);
                  checkEmail(data.errors.email);
                 checkPassword(data.errors.password[0]);
                  checkConfirmPassword(data.errors.password[1]);
-                 console.log(data.errors.password,777);
             } else {
                  window.location.href="./login.html" ;
-               
+              
              }
            return response; 
      }
