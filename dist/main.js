@@ -110,7 +110,7 @@ const checkConfirmPassword = (confirmErr) => {
         error.textContent = confirmErr?confirmErr:'The password does not match';
       }else {
         const error = document.getElementById('confirmError');
-        error.textContent = ' ';
+        error.textContent = confirmErr?confirmErr:' ';
         valid = true;
     }
 
@@ -153,11 +153,11 @@ registerForm.addEventListener('submit', (e)=>{
              if (data.errors){
                 checkUsername( data.errors.username);
                  checkEmail(data.errors.email);
-                checkPassword(data.errors.password[1]);
-                 checkConfirmPassword(data.errors.password[0]);
+                checkPassword(data.errors.password[0]);
+                 checkConfirmPassword(data.errors.password[1]);
             } else {
                  window.location.href="./login.html" ;
-               
+              
              }
            return response; 
      }
