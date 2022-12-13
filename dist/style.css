@@ -202,7 +202,9 @@ body {
         height:30vh;
         object-fit: cover;
     }
- 
+    .register-form{
+        align-items: center;
+    }
     .register-form input{
         width:80vw;
     }
@@ -211,6 +213,11 @@ body {
  }
  .login-content small {
     font-size: 1rem;
+ }
+
+ .register-form small{
+    width:95vw;
+    text-align: center;
  }
   }
 
