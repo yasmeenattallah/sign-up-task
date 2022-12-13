@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet"  href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <title>Succeed</title>
 </head>
 <body>
-    
+    <section class="login-container">
+       <section class="login-image" >
+        <img id="loginImg" src="./img/success.jpg" />
+       </section>
+       <section class="login-content">
+        <h1> Successfully logged in</h1>
+        <small id="loginEmail">Email : </small>
+       </section>
+    </section>
+    <script>
+const emailLog = document.getElementById("loginEmail");
+
+       emailLog.textContent = localStorage.getItem("email");
+    </script>
+
 </body>
 </html>
